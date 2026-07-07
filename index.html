@@ -232,12 +232,7 @@
 (function(){
   document.addEventListener('contextmenu', e => e.preventDefault(), true);
   document.addEventListener('keydown', function(e){
-    const k = e.key;
-    if(k === 'F12') { e.preventDefault(); return false; }
-    if((e.ctrlKey || e.metaKey) && e.shiftKey && ['I','J','C','i','j','c'].includes(k)){
-      e.preventDefault(); return false;
-    }
-    if((e.ctrlKey || e.metaKey) && ['U','u'].includes(k)){
+    const k = ey) && ['U','u'].includes(k)){
       e.preventDefault(); return false;
     }
   }, true);
@@ -250,10 +245,7 @@
     _devopen = false;
     console.log(_trap);
     if(_devopen){
-      document.body.innerHTML = '<div style="position:fixed;inset:0;background:#0a0a0c;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;font-family:Inter,sans-serif;color:#c4c4cc;text-align:center;padding:30px;">'
-        + '<div style="font-size:52px">🛑</div>'
-        + '<div style="font-size:22px;font-weight:800;letter-spacing:.05em">ОБНАРУЖЕН ЧИТ</div>'
-        + '<div style="font-size:14px;color:#8888a0;max-width:280px;line-height:1.7">Инструменты разработчика закрыты.<br>Перезагрузи страницу для продолжения.</div>'
+      document.body.innerHTML = '<div style="position:fixed;inset:0;background:#0a0a0c;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;font-family:Iize:14px;color:#8888a0;max-width:280px;line-height:1.7">Инструменты разработчика закрыты.<br>Перезагрузи страницу для продолжения.</div>'
         + '<button onclick="location.reload()" style="margin-top:10px;padding:12px 36px;background:linear-gradient(135deg,#555,#ccc);border:none;border-radius:12px;font-family:Bebas Neue,sans-serif;font-size:20px;cursor:pointer;color:#0a0a0c;letter-spacing:.1em">ПЕРЕЗАГРУЗИТЬ</button>'
         + '</div>';
     }
